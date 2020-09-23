@@ -1,0 +1,4 @@
+apt install zsh
+useradd -s /bin/zsh -m admin
+useradd -s /usr/sbin/nologin -m david
+nano /etc/default/useradd
