@@ -1,0 +1,25 @@
+cat ./.bash_profile 
+
+if [ -n "$PS1" ]; then
+        if [ "`echo $0`" = "-bash" ]; then
+        echo "INTERACTIVE LOGIN SHELL" && return;
+	else
+        echo "INTERACTIVE NON-LOGIN SHELL" && return;
+fi;
+fi;
+
+cat ./.bashrc 
+# ~/.bashrc: executed by bash(1) for non-login shells.
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# for examples
+
+# If not running interactively, don't do anything
+
+if [ -z "$PS1" ]; then
+	if [ "`echo $0`" = "bash"  ]; then
+	echo "NON INTERACTIVE LOGIN SHELL" && return;
+else 
+	echo "NON INTERACTIVE NON-LOGIN SHELL" && return;
+fi;
+fi;
+.......
